@@ -34,6 +34,11 @@ steps:
 - powershell: robot -x testoutput.xml tests/TestNotepad.robot
   displayName: 'Run Robot Scripts'
 
+- task: PublishTestResults@2
+  condition: succeededOrFailed()
+  inputs:
+    testResultsFiles: 'testoutput.xml'
+    testRunTitle: 'Publish test results for Python $(python.version)'
 - task: Windows Application Driver@0
   inputs:
     OperationType: 'Stop'
