@@ -28,7 +28,7 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
-    pip install robotframework Robotframework-appiumlibrary
+    pip install robotframework Appium-Python-Client==0.40 Robotframework-appiumlibrary
   displayName: 'Run a multi-line script'
 
 
